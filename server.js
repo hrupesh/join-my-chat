@@ -1,9 +1,9 @@
 const express = require("express");
+const { ExpressPeerServer } = require("peer");
 const app = express();
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
 const { v4: uuidV4 } = require("uuid");
-const { Socket } = require("dgram");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -31,3 +31,10 @@ io.on("connection", (socket) => {
 server.listen(process.env.PORT || 3000, () => {
   console.log("Chatting on Port " + process.env.PORT ? process.env.PORT : 3000);
 });
+
+const peerServer = ExpressPeerServer(server, {
+  debug: true,
+  path: "/",
+});
+
+app.use("/peerjs", peerServer);
