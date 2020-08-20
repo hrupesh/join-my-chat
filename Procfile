@@ -1,1 +1,1 @@
-web: peerjs --port 3001 && node server.js
+web: peerjs --port 3001 & node server.js & wait -n
