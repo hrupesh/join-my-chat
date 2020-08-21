@@ -34,9 +34,9 @@ server.listen(process.env.PORT || 3000, () => {
   console.log("Chatting on Port " + process.env.PORT ? process.env.PORT : 3000);
 });
 
-const peerServer = ExpressPeerServer(server, {
-  debug: true,
-  path: "/",
-});
+// const peerServer = ExpressPeerServer(server, {
+//   debug: true,
+//   path: "/",
+// });
 
-app.use("/peerjs", peerServer);
+// app.use("/peerjs", peerServer);
