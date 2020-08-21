@@ -7,6 +7,15 @@ const { v4: uuidV4 } = require("uuid");
 
 //todo : Use with ngrok to serve publically
 
+// const server2 = app.listen(3001);
+
+// const peerServer = ExpressPeerServer(server2, {
+//   debug: true,
+//   path: "/myapp",
+// });
+
+// app.use("/peerjs", peerServer);
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
