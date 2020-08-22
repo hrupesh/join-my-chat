@@ -1,7 +1,7 @@
 const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
 const myPeer = new Peer(undefined, {
-  host: "549f6dd73ff1.ngrok.io",
+  host: "0819de236774.ngrok.io",
   port: "443",
 });
 
