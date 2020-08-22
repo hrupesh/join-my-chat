@@ -5,7 +5,6 @@ const myPeer = new Peer(undefined, {
   port: "443",
 });
 
-
 const myVideo = document.createElement("video");
 myVideo.muted = true;
 
